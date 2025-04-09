@@ -1,0 +1,60 @@
+* {
+    color: pink;
+    /* background-color: black; */
+}
+
+
+/* body{
+    background-color: white;
+} */
+
+
+/* h2{
+    color: brown;
+} */
+
+
+
+/* .myList{
+    color: green;
+} */
+
+
+/* h3.myList{
+    color: crimson;
+} */
+
+
+
+
+/* #myPara{
+    color: cornflowerblue;
+} */
+
+
+/* Child Selector */
+
+
+/* ol>li , ol>h3{
+    color: coral;
+} */
+
+
+/* ol>b{
+    color: black;
+} */
+
+/* ol b {
+    color: black;
+} */
+
+/* h1+p{ */
+
+/* #sibling+p{
+    color: chocolate;
+} */
+
+#sibling~p{
+    color: darkcyan;
+}
+
