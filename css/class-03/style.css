@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    font-family: sans-serif; /*inherit*/
+    color: aqua;  /*inherit*/
+    background-color: burlywood; /*inherit*/
+    margin: 25px;
+}
+
+
+.child{
+background-color: bisque;
+margin: inherit;
+}
+
+
+.myElem{
+    /* color: burlywood; */
+    /* color: rgb(155, 10, 10) */
+    color: #678774 ;
+}
+
+.myPara{
+    color: lavender;
+}
+
+
+.opacity{
+    background-color: rgb(16, 148, 104);
+    margin: 15px;
+    padding: 15px;
+    
+}
+
+
+.lowOpacity{
+    /* opacity: 0.5; */
+    /* color: rgba(255, 24, 24, 0.24); */
+    /* color: hsl(25, 100%, 20%); */
+    color: hsla(25, 100%, 20%, 0.2);
+    background: #ececec;
+}
