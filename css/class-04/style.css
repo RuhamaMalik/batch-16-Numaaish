@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 20px;
+}
+
+
+
+.myH1{
+    font-family: sans-serif;
+}
+
+.myH1-2{
+    /* font-family: monospace; */
+    font-family:  Geneva , monospaces , sans-serif  ;
+}
+
+/*
+px
+%
+2em  === mm, rem
+vh
+vw
+vmax
+vmin
+*/
+
+.myPara{
+    /* font-size: 18px; */
+    font-size: 150% ;
+}
+
+
+.parent{
+    font-size: 30px;
+}
+
+.child{
+    /* font-size: 150% ; */
+    /* font-size: 50px ; */
+    /* font-size: 1.5em ; */
+    /* font-size: 1.5rem; */
+    /* font-size: 5vw; */
+    /* font-size: 5vh; */
+    /* font-size: 5vmax; */
+    /* font-size: 5vmin; */
+}
+
+
+
+.bold{
+    font-size: 3em;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+
+
+.bolder{
+    /* font-weight: bolder; */
+    /* font-family: sans-serif; */
+    /* font-weight: 800; */
+
+    font-style: italic;
+}
+.bolder2{
+    /* font-weight: bolder; */
+    /* font-family: sans-serif; */
+    /* font-weight: 800; */
+    font-style: oblique;
+}
+
+
+.transform{
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    text-transform: capitalize;
+
+}
