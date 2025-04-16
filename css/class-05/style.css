@@ -1,0 +1,105 @@
+.myLink {
+    text-decoration: none;
+    color: aqua;
+}
+
+.h1 {
+    text-decoration: underline;
+}
+
+.overLine {
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: blink; */
+
+    background-color: aqua;
+    line-height: 3em;
+}
+
+p {
+    /* line-height: 3em; */
+    /* letter-spacing: 5px; */
+    /* word-spacing: 10px; */
+    /* text-align: right; */
+    /* text-align: center; */
+    text-align: justify;
+}
+
+.verticalAlign {
+    /* vertical-align:middle; */
+    vertical-align: text-top;
+    ;
+}
+
+.indent {
+    text-indent: 5em;
+}
+
+
+.shadow {
+    /* text-shadow: -10px 0px 0px red ; */
+    /* text-shadow: 1px -10px 0px red ; */
+    text-shadow: 2px 2px 4px gray;
+}
+
+.pseudoElement {
+    text-indent: 5em;
+}
+
+.pseudoElement:first-letter {
+    font-size: 3em;
+
+}
+
+.pseudoElement::first-line{
+  text-shadow: 1px 2px 3px orange;
+}
+
+
+/* .link:link{ */
+.link{
+font-size: 3em;
+color: blueviolet;
+}
+
+
+.link:active{
+color: rgb(72, 239, 111);
+}
+
+.link:visited {
+    color: pink;
+  }
+
+
+  .hover1:hover{
+background-color: burlywood;
+  }
+
+
+  table{
+    width: 70%;
+    height: 400px;
+  }
+
+
+  .box{
+    background: pink;
+    height: 300px;
+    width: 300px;
+    margin: 2em;
+  }
+
+  .box:hover{
+    /* height: 500px;
+    width: 500px; */
+    background: rgb(183, 47, 69);
+
+
+  }
+
+
+  .input:focus{
+    background-color: gainsboro;
+    outline-color: blueviolet;
+  }
