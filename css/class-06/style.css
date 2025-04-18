@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+@font-face {
+   /* font-family: "font1" ; */
+   font-family: font1 ;
+   src: url("./assets/fonts/font.ttf");
+}
+@font-face {
+   font-family: font2 ;
+   src: url("./assets/fonts/font2.ttf");
+}
+
+
+
+*{
+   padding: 0;
+   margin: 0;
+}
+
+
+/* p[class]{
+   color: cadetblue; 
+} */
+
+
+/* p[class="para2"]
+{
+   color: cadetblue; 
+} */
+
+
+
+/* p[class~="para2"]
+{
+   color: cadetblue; 
+} */
+
+
+/* h1[class^="my"]{
+color:red
+} */
+/* h1[class*="my"]{
+color:red
+} */
+
+
+
+.changeFont{
+   /* font-family: sans-serif; */
+   font-family: "Kaushan Script", sans-serif;
+}
+.changeFont1{
+   font-family: "Unbounded", sans-serif;}
+
+   .multi{
+      font-family: "Bungee Spice", sans-serif;
+   }
+
+   .jan{
+      font-family: font1;
+      color: blueviolet;
+      font-weight: 500;
+   }
+
+   .font2{
+      font-family: font2;
+   }
+
+
+
+   .box{
+      width: 100vw;
+      height: 100vh;
+      background-color: palevioletred;
+   }
+
+
+   .sidebar{
+      height: 100%;
+      width: 20%;
+      background-color: #bd5d38;
+      display: inline-block;
+   }
+   .content{
+      height: 100%;
+      width: 80%;
+      background-color: whitesmoke;
+      display: inline-block;
+
+   }
