@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+.box{
+    /* height: 400px; */
+    max-width: 800px;
+    min-width: 300px;
+    /* width: 800px; */
+    background-color:hsl(0, 45%, 63%);
+    /* overflow: hidden; */
+    /* overflow:scroll; */
+    overflow:auto;
+    /* overflow-x: scroll; */
+
+
+        min-height:400px ;
+        max-height:400px ;
+
+}
+
+
+.container{
+    width: 300px ;
+    height: 300px ;
+    background-color: pink;
+    overflow: auto;
+    /* padding-top: 20px; */
+    /* padding: 10px 30px 20px 40px; */
+    /* padding: 40px 80px; */
+    /* padding: 10px; */
+
+    /* margin-bottom: 20px;
+    margin-left: 20px; */
+    /* margin: 20px; */
+    padding: 30px;
+    /* border-width: 5px 10px 20px 30px;
+    border-style: solid dotted dashed groove;
+    border-color: aqua forestgreen plum purple; */
+
+    border: 10px solid gray ;
+    /* 
+    border-bottom-color: black; */
+
+    /* margin: 20px auto ; */
+    /* margin: 20px auto 40px auto ; */
+    margin: auto;
+}
+
+/* a{
+    font-size: 3em;
+    text-decoration: none;
+    color: crimson;
+} */
+
+/* a:hover{
+    border-bottom-width: 4px ;
+    border-bottom-style: solid;
+    border-bottom-color: crimson;
+} */
+
+
+.display{
+    width: 300px ;
+    height: 300px ; 
+    /* background-color: aquamarine; */
+    display: inline-block;
+    vertical-align: top;
+    /* box-shadow: 5px 20px 5px rgb(166, 166, 166) ; */
+
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+
+.display3{
+    /* display: none; */
+    visibility: hidden;
+}
+
+
+.parent{
+    height: 100vh;
+    max-width: 100vw;
+}
+
+
+.child1{
+    height: 100vh;
+    width: 20%;
+    background-color: brown;
+    display: inline-block;
+    vertical-align: top;
+}
+.child2{
+    height: 100vh;
+    width: 79%;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    overflow: auto;
+
+}
+
+
+a{
+    font-size: 3em;
+    text-decoration: none;
+    color: rgb(240, 235, 236);
+    display: block;
+}
