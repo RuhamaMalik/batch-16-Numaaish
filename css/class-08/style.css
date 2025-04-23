@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(136, 94, 39);
+    margin: 20vh auto;
+    /* box-shadow: -5px -10px 4px brown ; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    /* border-radius: 10px; */
+
+    /* border-top-right-radius: 150px;
+border-bottom-right-radius: 150px */
+
+    /* border-radius:  50px  30px 300px  10px; */
+
+    /* border-radius: 76% 24% 70% 30% / 58% 17% 83% 42% ; */
+
+
+    /* clip-path: polygon(50% 0%, 45% 70%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); */
+
+    /* clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 100% 44%, 100% 20%, 80% 0%, 50% 30%); */
+
+    border-radius: 50%;
+
+}
+
+
+
+.dp {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    border: 12px solid green;
+
+    outline: 5px solid yellow;
+    outline-offset: 20px;
+
+    box-shadow: 5px 5px 5px rgb(68, 67, 67);
+}
+
+
+/* .iconSize{
+    font-size: 150px;
+    color: green;
+}
+
+.iconSize:hover{
+    color: aqua;
+} */
+
+
+.icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.icon:hover {
+    background-color: pink;
+}
+
+.icon:hover .iconSize {
+    color: black;
+}
+
+.iconSize {
+    line-height: 100px;
+}
+
+
+.list{
+  margin: 50px auto; 
+  width: 700px; 
+  font-size: 3em;
+
+
+  /* list-style-type: upper-alpha; */
+  list-style-type: decimal-leading-zero;
+  list-style-type: square;
+}
+
+.award img{
+    width: 20px;
+}
