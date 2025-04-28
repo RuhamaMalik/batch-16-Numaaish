@@ -1,0 +1,87 @@
+/* .cursor{
+    cursor: pointer;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.whatsApp{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.whatsApp img{
+    height: 100px;
+    width: 100px;
+}
+
+header {
+    height: 70px;
+    max-width: 100vw;
+    background-color: black;
+    color: white;
+    padding: 0 10%;
+    position: fixed;
+    /* top: 20px; */
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+h2,nav {
+    display: inline-block;
+    height: inherit;
+    vertical-align: top;
+    /* background-color: aqua; */
+    line-height: 70px;
+}
+
+h2{
+    width: 30%;
+}
+
+nav{
+    width: 60%;
+    text-align: right;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+
+
+.content{
+    padding-top: 70px;
+}
+
+/* sticky */
+.top{
+    font-size: 3em;
+    position: sticky;
+    top: 200px;
+    left: 40vw;
+}
+
+.relative{
+max-width: 100vw;
+height: 400px;
+background-color: blueviolet;
+position: relative;
+top:770px;
+
+}
+.absolute{
+width: 400px;
+height: 400px;
+background-color: rgb(9, 74, 104);
+position: absolute;
+top: 0;
+}
+
