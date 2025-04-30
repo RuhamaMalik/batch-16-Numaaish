@@ -13,6 +13,7 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
+    /* z-index: -1; */
 }
 
 .whatsApp img{
@@ -75,13 +76,15 @@ height: 400px;
 background-color: blueviolet;
 position: relative;
 top:770px;
+/*
+top:770px; */
 
 }
-.absolute{
+/* .absolute{
 width: 400px;
 height: 400px;
 background-color: rgb(9, 74, 104);
 position: absolute;
 top: 0;
 }
-
+ */
