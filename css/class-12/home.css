@@ -1,0 +1,39 @@
+@import url("./common.css");
+
+.banner{
+    height: 400px;
+    max-width: 100vw;
+    /* background-color: gray; */
+    /* background-image: url("./bg1.jpg") ;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover; */
+
+    background: #ffffff url("./bg1.jpg")no-repeat center;
+    background-size: cover;
+    color: white;
+    /* opacity: .5; */
+    position: relative;
+}
+
+.main{
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background-color: rgba(10, 153, 29, 0.288);
+}
+
+
+
+.fixedBg{
+    height: 400px;
+    max-width: 100vw;
+    background: #ffffff url("./bg2.webp")no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.fixedBg .main{
+    background: transparent;
+}

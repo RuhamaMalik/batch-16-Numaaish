@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.mainHeading {
+    font-size: 3em;
+    text-shadow: 2px 2px 2px gray;
+}
+
+p {
+    color: chocolate;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: darkkhaki;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(136, 131, 64);
+
+}
