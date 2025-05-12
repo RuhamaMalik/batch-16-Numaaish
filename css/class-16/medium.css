@@ -1,0 +1,45 @@
+/* .box {
+    background-color: rgb(8, 163, 44);
+    background-image: url("https://png.pngtree.com/background/20230526/original/pngtree-3d-black-hexagon-mesh-background-with-lighting-picture-image_2745056.jpg");
+} */
+
+
+/* header{
+    max-width: 60vw;
+    height: 100vh;
+} */
+
+.main , .main nav{
+    flex-direction: column;
+     align-items: flex-start;
+}
+
+.main .logo {
+    width: 100%;
+
+}
+.menu .btn{
+    display: inline-block;
+}
+
+
+
+.main nav{
+gap: 5px;
+width: 100%;
+display: none;
+}
+
+.menu:hover nav{
+display: flex;
+
+}
+.main nav  .sm{
+display: block;
+}
+.main nav  .lg{
+display: none;
+}
+.main nav a {
+ width: 100%;
+}

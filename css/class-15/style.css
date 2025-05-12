@@ -89,16 +89,16 @@
 
 
 
-.myDiv{
+.myDiv {
     height: 300px;
     width: 100%;
-    background: yellow url("https://static.vecteezy.com/system/resources/previews/008/013/409/non_2x/technology-concept-for-web-banner-template-or-brochure-blue-colour-vector.jpg") no-repeat center  ;
-background-size: cover;
+    background: yellow url("https://static.vecteezy.com/system/resources/previews/008/013/409/non_2x/technology-concept-for-web-banner-template-or-brochure-blue-colour-vector.jpg") no-repeat center;
+    background-size: cover;
 }
 
 
-@media only screen and (max-width : 600px){
-.myDiv{
-    background-image: url("https://www.shutterstock.com/image-vector/digital-technology-banner-green-blue-260nw-2277275221.jpg");
-}
+@media only screen and (max-width : 600px) {
+    .myDiv {
+        background-image: url("https://www.shutterstock.com/image-vector/digital-technology-banner-green-blue-260nw-2277275221.jpg");
+    }
 }
