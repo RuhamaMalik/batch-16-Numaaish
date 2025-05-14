@@ -40,6 +40,96 @@
 
 
 /* /////////////////////////  Exmaple */
+
+
+.main {
+    max-width: 1800px;
+    height: inherit;
+    margin: 0 auto;
+
+}
+
+section {
+    /* min-height: 70vh; */
+    padding: 3em 2em;
+    /* background-color: burlywood; */
+}
+
+/* //////// Hero section start */
+
+.hero .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    min-height: 40vh;
+}
+
+.hero .heroImg {
+    width: 40%;
+    height: 400px;
+}
+
+.hero .content {
+    width: 50%;
+    /* background-color: blueviolet; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 2em;
+}
+
+.hero .content h2 {
+    font-size: 4em;
+    color: blueviolet;
+}
+
+.hero .content p {
+    color: rgba(128, 128, 128, 0.897);
+    line-height: 28px;
+    letter-spacing: 2px;
+}
+
+
+
+.btns button {
+    border: none;
+    padding: 1em 3em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.btns .btn1 {
+    background-color: blueviolet;
+    color: white;
+}
+
+.btns .btn1:hover {
+    background-color: transparent;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+.btns .btn2 {
+     background-color: transparent;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+
+.btns .btn2:hover {
+   background-color: blueviolet;
+    color: white;
+}
+
+
+
+/* //////// Hero section end */
+
+
+
 header {
     min-height: 70px;
     max-width: 100vw;
@@ -49,29 +139,26 @@ header {
 
 
 
-.main {
-    max-width: 1800px;
-    height: inherit;
-    margin: 0 auto;
 
 
+
+header .main {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-
-.main .logo {
+header .main .logo {
     width: 30%;
     color: white;
 
 }
 
-.menu .btn{
+header .menu .btn {
     display: none;
 }
 
-.main nav {
+header .main nav {
     width: 60%;
     height: inherit;
     display: flex;
@@ -81,16 +168,16 @@ header {
 }
 
 
-.main nav .sm {
+header .main nav .sm {
     display: none;
 }
 
-.main nav a {
+header .main nav a {
     color: white;
     padding: 1.6em;
 
 }
 
-.main nav a:hover {
+header .main nav a:hover {
     background-color: rgb(36, 191, 234);
 }

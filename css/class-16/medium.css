@@ -9,37 +9,44 @@
     height: 100vh;
 } */
 
-.main , .main nav{
+header .main , .main nav{
     flex-direction: column;
      align-items: flex-start;
 }
 
-.main .logo {
+header .main .logo {
     width: 100%;
 
 }
-.menu .btn{
+ header .menu .btn{
     display: inline-block;
 }
 
 
 
-.main nav{
+header .main nav{
 gap: 5px;
 width: 100%;
 display: none;
 }
 
-.menu:hover nav{
+header .menu:hover nav{
 display: flex;
 
 }
-.main nav  .sm{
+header .main nav  .sm{
 display: block;
 }
-.main nav  .lg{
+header .main nav  .lg{
 display: none;
 }
-.main nav a {
+header .main nav a {
  width: 100%;
+}
+
+
+/* ///////////////////// hero section */
+
+.hero .main{
+    flex-direction: column-reverse;
 }
