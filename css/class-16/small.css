@@ -11,6 +11,9 @@
     width: 100%;
 }
 
+.servics .cards , .faqs .questions{
+      padding: 2em;
+}
 
 /* .btns{
     display: flex;

@@ -113,14 +113,15 @@ section {
     color: blueviolet;
     border: 1px solid blueviolet;
 }
+
 .btns .btn2 {
-     background-color: transparent;
+    background-color: transparent;
     color: blueviolet;
     border: 1px solid blueviolet;
 }
 
 .btns .btn2:hover {
-   background-color: blueviolet;
+    background-color: blueviolet;
     color: white;
 }
 
@@ -145,12 +146,14 @@ header {
 header .main {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2em;
 }
 
 header .main .logo {
     width: 30%;
     color: white;
+    font-size: 2em;
 
 }
 
@@ -180,4 +183,102 @@ header .main nav a {
 
 header .main nav a:hover {
     background-color: rgb(36, 191, 234);
+}
+
+
+/* ////////// Services */
+
+.servics {
+    background-color: rgba(227, 225, 225, 0.701);
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+h1 span {
+    color: blueviolet;
+}
+
+
+.servics .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 5em;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    transition:
+        background-color 1s ease-in-out,
+        height 0.5s ease-in-out,
+        width 0.5s ease-in-out;
+}
+
+.card:hover {
+    background-color: black;
+    width: 275px;
+    height: 275px;
+}
+
+.card:hover h3 {
+    color: white;
+}
+
+.card i {
+    font-size: 3em;
+    color: blueviolet;
+}
+
+.card p {
+    width: 80%;
+    text-align: center;
+    color: rgb(118, 109, 126);
+}
+
+
+/* ////////////////// FAQs */
+
+.faqs .questions {
+    padding: 5em;
+}
+
+.question {
+    position: relative;
+}
+
+.downArrow,
+.upArrow {
+    font-size: 1.5em;
+    position: absolute;
+    top: .5em;
+    right: 1em;
+}
+
+.upArrow{
+    z-index: -1;
+}
+
+.question h3 {
+    background-color: black;
+    color: white;
+    padding: 1em;
+}
+
+.question p {
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
