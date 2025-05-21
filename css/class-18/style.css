@@ -1,0 +1,202 @@
+/* :root{
+    --light-color : limegreen;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --custom-color : white;
+} */
+
+
+/* :root{
+    --light-color : crimson;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --custom-color : white;
+} */
+
+/* .box{
+    --light-color : crimson;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --custom-color : white;
+
+    height: 300px;
+    width: 300px;
+    border: 2px solid var(--light-color) ;
+    color: var(--light-color);
+}
+
+button{
+    border: none;
+    padding: 2em;
+    background-color: var(--light-color);
+    color: var(--custom-color);
+    box-shadow: var(--box-shadow);
+}
+
+h1{
+    color: var(--light-color);
+} */
+
+/* 
+@keyframes bhootniGayab {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+} */
+
+
+/* @keyframes bhootniNamudar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
+
+
+@keyframes changBg {
+    /* from {
+       background-color: blue;
+    }
+
+    to {
+        background-color: aquamarine;
+    } */
+
+    /* 0%{
+        background-color: blue;
+    }
+    25%{
+        background-color: rgb(13, 94, 131);
+    }
+    50%{
+        background-color: rgb(13, 131, 123);
+    }
+    75%{
+        background-color: rgb(4, 101, 32);
+    } */
+}
+
+.container {
+    /* height: 300px;
+    width: 300px;
+    background: rgb(4, 101, 32); */
+
+
+    /*
+    opacity: 0;
+    animation-name:bhootniGayab ;
+    animation-duration: 5s; */
+
+
+    /* animation-name: bhootniNamudar;
+    animation-duration: 3s ; */
+    /* animation-delay: 10s ; */
+
+
+
+    /* animation-name: changBg;
+    animation-duration: 5s ; */
+
+}
+
+
+
+
+.spinner {
+    /* height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid rgba(0, 0, 0, 0.303);
+    border-bottom-color: rgb(119, 119, 6);
+    animation-name: rotate;
+    animation-duration:2s;
+    animation-iteration-count: infinite ; */
+
+
+    /* animation-timing-function:ease-in-out ; */
+    /* animation-direction:alternate-reverse; */
+}
+
+
+/* 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) ;
+    }
+
+    to {
+        transform: rotate(360deg) ;
+    }
+} */
+
+
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+    --d:22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: #25b09b;
+    margin: 0 auto;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: l27 1s infinite steps(8);
+  }
+  @keyframes l27 {
+    100% {transform: rotate(1turn)}
+  } */
+
+
+@keyframes moveLeft {
+    from {
+        left: 83.5%;
+    }
+
+    to {
+        left:0%;
+    }
+}
+@keyframes moveRight {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 83.5%;
+    }
+}
+
+.example {
+    height: 300px;
+    width: 300px;
+    background-color: lightcoral;
+    position: relative;
+}
+
+.example .box , .example .box1 {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(65, 9, 9);
+    position: absolute;
+    left: 83.5%;
+    animation-name:moveRight ;
+    animation-duration: 2s;
+}
+
+.example .box1{
+    top: 52px;
+    animation-name:moveLeft ;
+    background-color: rgb(23, 131, 170);
+
+}

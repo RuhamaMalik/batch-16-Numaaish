@@ -307,13 +307,20 @@ footer .main{
       display: flex;
       gap: 1em;
       justify-content: space-between;
+      flex-wrap: wrap;
 }
 
 footer .main .links{
     display: flex;
     flex-direction: column;
     gap: 1em;
+    flex-basis: 250px;
 }
 footer .links a{
    color: white;
+}
+
+footer .socials{
+    display: flex;
+    gap: 1em;
 }
