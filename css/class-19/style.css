@@ -1,0 +1,53 @@
+/* .animate__slideInRight{
+    animation-iteration-count: infinite;
+}
+
+
+.darkcyan{
+    color: darkcyan;
+}
+
+.pink{
+    color: palevioletred;
+}
+
+.indigo{
+    color: indigo;
+} */
+
+.box{
+    /* height: 300px;
+    width: 300px;
+    background: darkolivegreen;
+    transition: transform 0.2s ease-in-out; */
+    /* filter: blur(5px);  */
+    /* transform: skew(45deg) ; */
+}
+.box:hover{
+    /* transform: translate(50px , 100px) ; */
+    /* transform: translateY(100px) ; */
+    /* transform: scale(2) ; */
+    /* transform: rotate(120deg) ; */
+    /* transform: skew(45deg) ; */
+
+    
+}
+
+
+.filter{
+    /* filter: brightness(50%) ; */
+    /* filter: hue-rotate(250deg); */
+    /* filter: grayscale(150%); */
+    /* filter: blur(20px); */
+}
+
+
+.dropShadow{
+    /* box-shadow:15px 10px 5px rgb(119, 132, 139) ; */
+  /* filter: drop-shadow(15px 10px 5px rgb(119, 132, 139)); */
+}
+
+
+p:nth-child(2){
+color: brown;
+}
