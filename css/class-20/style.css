@@ -1,0 +1,42 @@
+/* p:nth-child(1){  /// kisi bhi type ka element
+background-color: blueviolet;
+} */
+
+/* p:nth-of-type(1){ //// specific type  
+background-color: blueviolet;
+} */
+
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+.grid{
+  height: 100vh;
+  width: 100vw;
+  background-color: brown;
+  display: grid;
+  /* grid-template-columns: 350px 350px 550px 350px ; */
+  /* grid-template-columns: 2fr 350px  1fr 350px ; */
+  /* grid-template-columns: 1fr repeat(3 , 350px) 1fr  ; */
+  /* grid-template-rows: 400px 1fr; */
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 70px   80vh 10vh ; */
+   /* row-gap: 50px;
+   column-gap: 100px; */
+   /* gap: 50px 100px; */
+   grid-template-columns: repeat(4, 350px);
+   gap: 50px;
+   align-items:start;
+   /* justify-content: center; */
+   justify-content:space-around;
+} 
+
+
+.box{
+    height: 300px;
+  width: 300px;
+  background-color: rgb(207, 77, 77);
+ 
+  
+}
