@@ -12,7 +12,7 @@ background-color: blueviolet;
 }
 
 .grid{
-  height: 100vh;
+  min-height: 80vh;
   width: 100vw;
   background-color: brown;
   display: grid;
@@ -25,18 +25,19 @@ background-color: blueviolet;
    /* row-gap: 50px;
    column-gap: 100px; */
    /* gap: 50px 100px; */
-   grid-template-columns: repeat(4, 350px);
+   /* grid-template-columns: repeat(4, 400px); */
+   grid-template-columns: repeat(auto-fit, minmax(400px , 1fr) );
    gap: 50px;
-   align-items:start;
+   justify-content: center;
+   /* justify-items: center; */
+   /* align-items: end; */
+   align-content:center;
    /* justify-content: center; */
-   justify-content:space-around;
 } 
 
 
 .box{
-    height: 300px;
+  height: 300px;
   width: 300px;
   background-color: rgb(207, 77, 77);
- 
-  
 }
