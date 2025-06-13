@@ -1,0 +1,26 @@
+> HTML
+> CSS (BOOK)
+> GIT & GITHUB
+> GOOGLE FONT
+>FONTAWESOME
+> NETLIFY HOSTING
+> ANIMATIONS + CSS TRICK
+> MEDIA QUERY
+> TRANSITION+FILTERR
+> FLEX
+> GRID
+> BOOTSTRAP
+
+
+
+
+IT?
+Programming?
+Programming Language
+    1) Low Level PL
+    2) Hiegh Level P;L   
+sCRIPTING lANGUAGE > compile
+Translation
+    1) Compilation > saara code aik saath translate hota hai
+     2) interpretation --- line by line   
+     3) Assembler

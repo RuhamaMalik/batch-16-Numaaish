@@ -15,11 +15,12 @@
 
 <body>
 
-    <nav class="container-xxl px-5 border border-secondary navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 z-1 start-50 translate-middle-x rounded-pill" data-bs-theme="light">
+    <nav class="container-xxl px-5 border border-secondary navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 z-1 start-50 translate-middle-x rounded-pill headerRadius"
+        data-bs-theme="light">
         <div class="container-xxl">
-             <a class="navbar-brand" href="#">
-      <img src="./Logo.png" alt="Bootstrap" width="80" height="24">
-    </a>
+            <a class="navbar-brand" href="#">
+                <img src="./Logo.png" alt="Bootstrap" width="80" height="24">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -54,7 +55,8 @@
 
                 </ul>
 
-                <button class="btn btn-outline-secondary rounded-pill px-3 " type="submit"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</button>
+                <button class="btn btn-outline-secondary rounded-pill px-3 " type="submit" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</button>
 
             </div>
         </div>
@@ -64,7 +66,7 @@
 
 
 
-    <div
+    <!-- <div
         class="  container-xxl    flex-md-row d-flex flex-column   justify-content-center  justify-content-lg-between  gap-5">
         <div class="p-2">Flex item 1</div>
         <div class="p-2">Flex item 2</div>
@@ -207,7 +209,7 @@
                 <h1>Item3</h1>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -218,7 +220,7 @@
     <!-- /////////////// Modal -->
 
 
-<!-- <div class="modal fade  modal-dialog modal-dialog-centered modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">        <div class="modal-dialog">
+    <!-- <div class="modal fade  modal-dialog modal-dialog-centered modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Modal title</h5>
@@ -235,34 +237,54 @@
         </div>
     </div> -->
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Login Form</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-email" class="col-form-label">Email:</label>
-            <input type="email" class="form-control" id="recipient-email">
-          </div>
-           <div class="mb-3">
-            <label for="recipient-pswd" class="col-form-label">Password:</label>
-            <input type="password" class="form-control" id="recipient-pswd">
-          </div>
-          
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
+    <div class="container-xxl " style="padding-top: 7em !important;">
+        <div class="heroSection bg-warning d-flex align-items-center flex-column flex-lg-row p-5 rounded-2">
+            <div class="text p-4">
+                <p>Welcome to Realstate</p>
+                <h2 class="display-4 fw-bold">Manage Your Property</h2>
+                <p>Your will have everything nearby supermarket, buses , station, the carmen neighborhood, etc</p>
+                <div class="input-group mb-3 ">
+                    <input type="text" class="form-control p-2 p-sm-3 rounded-start-pill z-0" placeholder="Enter Your Email"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text p-2 p-sm-3 text-light bg-dark rounded-pill fw-bold position-relative z-5"
+                        style="right: 4em !important;" id="basic-addon2">Get A
+                        Qoute</span>
+                </div>
+            </div>
+            <div class="img">
+                <img src="./Group2.png" alt="House Image" class="img-fluid">
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login Form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="recipient-email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-pswd" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="recipient-pswd">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

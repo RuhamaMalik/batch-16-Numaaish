@@ -1,0 +1,9 @@
+.heroSection{
+    background: linear-gradient(90deg, #C1DEE8,#FBD9B9),url("./grainy.png");
+}
+
+@media (max-width: 992px){
+.headerRadius{
+    border-radius: 0 !important;
+}
+}
