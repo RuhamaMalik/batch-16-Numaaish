@@ -4,9 +4,9 @@
 
 // prompt(Question, defaultAns(optional))
 
-// var username = prompt("What is your name?", "Guest");
+// var username = prompt("What is your name ? ", "Guest");
 
-// console.log("Your name is "+username);
+// console.log("Your name is " + username);
 // console.log(typeof username);// string
 
 
