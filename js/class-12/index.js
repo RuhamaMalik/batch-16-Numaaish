@@ -7,7 +7,7 @@
 // copy[2] = "PAK-Studies";
 
 // console.log("BOOKS: ",books); // change one
-// console.log("COPY: ",copy); //  change one
+// console.log("COPY: ", copy); //  change one
 
 // books[1][1] = "PAK-Studies"; /// all nested levels still connected to the original reference
 
@@ -61,6 +61,10 @@
 
 // var colors = ["red", "yellow", "orange", "pink","green","blue", "black", "purple"];
 
+// colors.length=0
+// colors=[]
+
+
 
 // console.log(colors.slice()); // ["red", "yellow", "orange","pink","green","blue", "black", "purple"];
 // console.log(colors.slice(2)); // ['orange', 'pink', 'green', 'blue', 'black', 'purple']
@@ -83,9 +87,11 @@ var colors = ["red", "yellow", "orange",      "pink", "green" ,"blue", "black", 
 // colors.splice(3, 2) // ["red", "yellow", "orange", "blue", "black", "purple"]
 
 console.log(colors);
+colors.splice(0)
+console.log(colors);
 
 // colors.splice(4 , 1 , "white"); //  ['red', 'yellow', 'orange', 'pink', 'white', 'blue', 'black', 'purple']
 // colors.splice(3, 2 , "lemon", "crimson"); // ['red', 'yellow', 'orange', 'lemon', 'crimson', 'blue', 'black', 'purple']
-colors.splice(3, 0, "lemon", "crimson") // ['red', 'yellow', 'orange', 'lemon', 'crimson', 'pink', 'green', 'blue', 'black', 'purple']
+// colors.splice(3, 0, "lemon", "crimson") // ['red', 'yellow', 'orange', 'lemon', 'crimson', 'pink', 'green', 'blue', 'black', 'purple']
 
-console.log(colors);
+// console.log(colors);
