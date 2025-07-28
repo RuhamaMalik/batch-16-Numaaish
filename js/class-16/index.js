@@ -5,7 +5,7 @@
 
 // let ans = "6" / "3";
 
-// document.writeln ( typeof ans );
+// document.writeln( typeof ans );
 
 
 
