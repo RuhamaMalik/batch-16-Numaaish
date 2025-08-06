@@ -10,19 +10,21 @@
 
 
 // var txt = "anshra wali muhammad kapadia";
-// console.log(txt);
+// // console.log(txt);
 
 // var words = txt.split(" ")
+
 // var capitalize = "";
 
 // for (var i = 0; i < words.length; i++) {
 //   var word = words[i];
 //   capitalize += word.charAt(0).toUpperCase() + word.slice(1) + " "
+// //Anshra
 
 // }
 // console.log(capitalize);
 
-// 28 - Converting strings to integers and decimals
+// 28 - Converting strings to integers/num and decimals/floating point number
 
 
 // var str = "2.89";
