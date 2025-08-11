@@ -25,8 +25,8 @@
 // var date = new Date();
 
 // console.log("Hours >>>> " , date.getHours());
-// console.log("Minutes >>>> " , date.getMinutes());
-// console.log("Seconds >>>> " , date.getSeconds());
+// console.log("Minutes >>>> " , date.getMinutes());0-59
+// console.log("Seconds >>>> " , date.getSeconds());0-59
 // console.log("Milliseconds >>>> " , date.getMilliseconds());
 
 // console.log("FullYear >>>> " , date.getFullYear());
