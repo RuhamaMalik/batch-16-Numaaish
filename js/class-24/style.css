@@ -1,0 +1,17 @@
+.ugly-img{
+  display: none;
+}
+
+
+
+.flower{
+  border: 2px solid salmon;
+  width: 30%;
+  filter: brightness(70%);
+}
+
+
+.big{
+  width: 50%;
+  filter: brightness(120%);
+}
