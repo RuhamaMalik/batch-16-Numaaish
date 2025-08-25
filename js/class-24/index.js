@@ -56,26 +56,26 @@
 
 
 
-// function fillCity() {
-//   var cityName;
-//   var zipEntered = document.getElementById("zip").value;
-//   console.log(">>>>>>>>>> zipEntered ", zipEntered);
+function fillCity() {
+  var cityName;
+  var zipEntered = document.getElementById("zip").value;
+  console.log(">>>>>>>>>> zipEntered ", zipEntered);
 
-//   switch (zipEntered) {
-//     case "11111":
-//       cityName = "Karachi";
-//       break;
-//     case "22222":
-//       cityName = "Peshawar";
-//       break;
-//     case "33333":
-//       cityName = "Quetta";
-//       break;
-//       default:
-//           cityName = "City not found";
-//   }
-//   document.getElementById("city").value = cityName;
-// }
+  switch (zipEntered) {
+    case "11111":
+      cityName = "Karachi";
+      break;
+    case "22222":
+      cityName = "Peshawar";
+      break;
+    case "33333":
+      cityName = "Quetta";
+      break;
+      default:
+          cityName = "City not found";
+  }
+  document.getElementById("city").value = cityName;
+}
 
 
 // <!-- ///////////// Reading and setting paragraph text  -->
