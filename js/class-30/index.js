@@ -132,29 +132,116 @@
 
 
 
-function checkPassword() {
-  try {
-    var pass = document.getElementById("f1").value;
-    if (pass.length < 8) {
-      throw "Please enter at least 8 characters.";
+// function checkPassword() {
+//   try {
+//     var pass = document.getElementById("f1").value;
+//     if (pass.length < 8) {
+//       throw "Please enter at least 8 characters.";
       
-    }
-    if (pass.indexOf(" ") !== -1) {
-      throw "No spaces in the password, please.";
-    }
-    var numberSomewhere = false;
-    for (var i = 0; i < pass.length; i++) {
-      if (isNaN(pass(i, i + 1)) === false) {
-        numberSomewhere = true;
-        break;
-      }
-    }
-    if (numberSomewhere === false) {
-       throw "Include at least 1 number.";
-    }
-  }
-  catch (err) {
-    console.log(err);
+//     }
+//     if (pass.indexOf(" ") !== -1) {
+//       throw "No spaces in the password, please.";
+//     }
+//     var numberSomewhere = false;
+//     for (var i = 0; i < pass.length; i++) {
+//       if (isNaN(pass(i, i + 1)) === false) {
+//         numberSomewhere = true;
+//         break;
+//       }
+//     }
+//     if (numberSomewhere === false) {
+//        throw "Include at least 1 number.";
+//     }
+//   }
+//   catch (err) {
+//     console.log(err);
   
-  }
-}
+//   }
+// }
+
+
+// function sayHello (){
+//   alert("Hello classs");
+// }
+
+// document.getElementById("btn").onclick = sayHello
+
+
+
+// document.getElementById("btn").addEventListener("click", function(){
+
+// })
+
+
+// function sayHello(){
+//   alert("Hello classs");
+// }
+
+// document.getElementById("btn").addEventListener("click", sayHello)
+
+
+
+/////////////////////////////
+
+
+// document.getElementById("loginForm").addEventListener("submit",function(e){
+
+// e.preventDefault();
+// console.log("Submit");
+
+// var username = document.getElementById("username").value;
+// var email = document.getElementById("email").value;
+
+// var data ={
+//   name:username,
+//   email:email
+// }
+
+
+// console.log(data);
+
+
+// })
+
+// var arrr = [1,2,3,4,5];
+
+// arrr.splice(2)
+
+// console.log(arrr);
+
+
+// for(var i=1 ; i<=5 ; ){
+// console.log("pagal");
+
+// }
+
+
+// var num = 89;
+
+// console.log(num.toFixed(2));
+
+// function abcd (a="Guest",b){
+// // console.log("Hello ", a);
+// // console.log("Hello ", b);
+
+// // console.log(arguments.length);
+
+
+// }
+
+
+
+// // abcd(undefined,6)
+// abcd(5)
+
+
+
+// var xyz = "Hello";
+
+// function greet(){
+//   var xyz = "Inner";
+// console.log(xyz);
+// }
+// greet();
+
+// console.log(xyz); // 
