@@ -111,7 +111,7 @@
 // concept(2, 3)//-------------- 5 
 
 
-let ar = [1,2,3,4,5];
+let ar = [1, 2, 3, 4, 5];
 
 
 const iterator = ar[Symbol.iterator]();
