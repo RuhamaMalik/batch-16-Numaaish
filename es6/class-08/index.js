@@ -1,4 +1,4 @@
-////////// Array Methods
+////////// Array Methods 
 
 //////////////// forEach
 
@@ -94,3 +94,4 @@ let colours = ["Red", "Blue","Black","white","pink", "green"];
 // let result = arr.filter((e)=> e === e.split("").reverse().join(""))
 
 // console.log(result);
+
