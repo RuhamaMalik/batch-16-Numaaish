@@ -50,10 +50,14 @@ const showRecipes = (recipes) => {
     <p class="card-text">Ratings: ${recipe?.rating}</p>
     <p class="card-text">Servings: ${recipe?.servings}</p>
     
-    <!-- Button trigger modal -->
+ <a class="btn btn-danger" href="./detail.html?id=${recipe.id}">Recipe Details</a>
+
+
+    <!-- Button trigger modal 
     <button onclick="showDetails(${recipe.id})" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
      Recipe Details
    </button>
+   -->
   </div>`
 
 
@@ -75,13 +79,34 @@ const detailTimings = document.getElementById("detailTimings");
 const detailIng = document.getElementById("detail-ING");
 const detailIns = document.getElementById("detail-ins");
 
-const showDetails = async (id)=>{
+const showDetails = async (id) => {
 
- let result = await fetchData();
- const recipes = result?.recipes
-     const recipe = recipes.find((r)=> r.id === id);
+  let result = await fetchData();
+  const recipes = result?.recipes
+  const recipe = recipes.find((r) => r.id === id);
+  console.log(recipe);
 
-      console.log(recipe);
+  detailImg.src = recipe.image;
+  detailTitle.innerText = recipe.name;
+  detailTimings.innerText = recipe.prepTimeMinutes;
+
+  // ingredients
+  recipe.ingredients.forEach((ingredient) => {
+    const li = document.createElement("li");
+    li.innerText = ingredient;
+    detailIng.appendChild(li)
+  })
+
+
+  // instructions
+  recipe.instructions.forEach((instruction) => {
+    const li = document.createElement("li");
+    li.innerText = instruction;
+    detailIns.appendChild(li)
+  })      
+
+
+
 
 
 }

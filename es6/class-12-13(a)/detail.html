@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+  <h1>Recipe Details</h1>
+
+
+  <div class="container-xxl">
+     <img id="detail-img" class="img-fluid" src="" alt="image..">
+
+       <h1 id="detailTitle">Recipe title...</h1>
+
+       <h3 class="text-secondary">Timings: <span id="detailTimings" ></span></h3>
+
+       <h4>Ingredients:</h4>
+
+       <ul id="detail-ING" >
+        <!-- <li>Pizza dough</li>
+        <li>Tomato sauce</li>
+        <li>Fresh mozzarella cheese</li> -->
+       </ul>
+
+      
+
+
+         <h4>Instructions:</h4>
+
+       <ul id="detail-ins">
+        <li>Preheat the oven to 475°F (245°C)</li>
+        <li>Roll out the pizza dough and spread tomato sauce evenly.</li>
+        <li>Top with slices of fresh mozzarella and fresh basil leaves.</li>
+       </ul>
+  </div>
+
+<script>
+  const getQueryParam =()=>{
+   const urlParams = new URLSearchParams(window.location.search);
+  //  console.log(urlParams.get("id"));
+   return urlParams.get("id"); // string
+  }
+
+const fetchData = async () => {
+  try {
+
+    const reponse = await fetch("https://dummyjson.com/recipes");
+    return reponse.json();
+
+  } catch (error) {
+    // console.log(error);
+    throw new Error(`ERRO in Data Fetch : ${error}`)
+
+  }
+}
+
+
+const detailImg = document.getElementById("detail-img");
+const detailTitle = document.getElementById("detailTitle");
+const detailTimings = document.getElementById("detailTimings");
+const detailIng = document.getElementById("detail-ING");
+const detailIns = document.getElementById("detail-ins");
+
+const showDetails = async () => {
+
+  let result = await fetchData();
+  
+  const recipes = result?.recipes;
+   
+
+  const id =  getQueryParam();
+
+
+  const recipe = await recipes.find((r) =>r.id === Number(id)
+  );
+  console.log(recipe);
+
+  detailImg.src = recipe.image;
+  detailTitle.innerText = recipe.name;
+  detailTimings.innerText = recipe.prepTimeMinutes;
+
+  // ingredients
+  recipe.ingredients.forEach((ingredient) => {
+    const li = document.createElement("li");
+    li.innerText = ingredient;
+    detailIng.appendChild(li)
+  })
+
+
+  // instructions
+  recipe.instructions.forEach((instruction) => {
+    const li = document.createElement("li");
+    li.innerText = instruction;
+    detailIns.appendChild(li)
+  })      
+
+
+
+
+
+}
+
+
+
+showDetails();
+  
+
+</script>
+
+
+
+</body>
+</html>
