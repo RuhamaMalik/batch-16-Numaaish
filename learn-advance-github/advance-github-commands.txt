@@ -1,0 +1,16 @@
+> git branch "branchName"  ----------  create branch
+> git checkout "branchName"  ----------  select/switch branch
+> git checkout -b "branchName" ----------  create and select branch
+> git branch ---------- show all branches
+
+
+------ kaam karne k baad
+
+> git add .
+> git commit -m ""
+>git push -u origin branchName
+
+
+
+> git log  || git log --oneline ---------- comiit history
+> git diff branch branch1Name   branch2Name 
