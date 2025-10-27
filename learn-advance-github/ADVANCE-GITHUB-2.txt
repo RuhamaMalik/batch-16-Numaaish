@@ -1,0 +1,11 @@
+- team head (
+   - create project
+   - push hello world
+   - repo settings > collaboratorr > add
+   - inform
+)
+
+- team members (
+    - clone
+    -  crete branch (ruhama-login)
+)
