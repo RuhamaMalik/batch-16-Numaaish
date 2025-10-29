@@ -1,0 +1,6 @@
+- live master > local master --------------  git add . + go to github section of vscode > pull
+- local master > local footer ------------- go to footer branch + git merge master > resolve conflict > git add . >git commit 
+- live master > local footer -------------  go to footer branch + git rebase master ====  resolve conflict > git add . > git rebase --continue
+
+
+git cherry-pick abcd efgh
