@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch16_Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <!--  Header -->
+
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-xxl">
+    <a class="navbar-brand" href="#">Batch_16</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">Login</a>
+        </li>
+     
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
+  <!--  Header -->
+  <!-- Form -->
+
+  <form class="container-xxl p-5 border bg-dark my-5 text-light border-1">
+  <h1 class="text-primary">  Login Form</h1>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text  text-light">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="pswd" class="form-label">Password</label>
+    <input type="password" class="form-control" id="pswd">
+  </div>
+
+   <div class="mb-3">
+    <p>Don't Have an Account? <a href="./signup.html">Signup</a></p>
+  </div>
+  
+  <button type="button" id="btn2" class="btn btn-primary">Login</button>
+</form>
+  
+
+<script type="module" src="../index.js"></script>
+</body>
+</html>
