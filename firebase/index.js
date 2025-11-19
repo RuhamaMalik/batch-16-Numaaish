@@ -22,6 +22,7 @@ const signUp = async () => {
   }
 
 }
+ 
 
 document.getElementById("btn")?.addEventListener("click", signUp);
 
