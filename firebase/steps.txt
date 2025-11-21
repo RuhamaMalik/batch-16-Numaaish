@@ -1,0 +1,3 @@
+> firbase console ---- create project
+> Click on Add App ---- Select </> ----- Register app ---- copy script and paste in firebase.config.js file
+> Authentication > get started > add provider
