@@ -5,7 +5,9 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   updatePassword,
-  signOut
+  signOut,
+  GoogleAuthProvider,
+  signInWithPopup
 } from "./firebase.config.js";
 
 
@@ -46,7 +48,7 @@ const login = async () => {
       await sendEmailVerification(auth.currentUser);
       console.log("email sent successfully");
     } else {
-      window.location.replace("/")
+      window.location.replace("/");
 
     }
 
@@ -87,7 +89,7 @@ const ResetPassword = async () => {
     if (newPassword && newPassword.length >= 6) {
       await updatePassword(user, newPassword);
       alert("Password Update Successfully!");
-    }else{
+    } else {
       alert("Enter atleast 6 characters");
     }
 
@@ -104,6 +106,24 @@ document.getElementById("reset-btn")?.addEventListener("click", ResetPassword);
 
 ///////////////////////////////  Logout
 
-document.getElementById("logout-btn")?.addEventListener("click",()=>{
+document.getElementById("logout-btn")?.addEventListener("click", () => {
   signOut(auth);
 })
+
+
+//////////////////////////// SignIn with Google
+
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });
+const signInWithGoogle = async () => {
+  try {
+  const result = await signInWithPopup(auth,provider);
+  // console.log(">>>>>>>> ",result.user);
+   window.location.replace("/");
+  } catch (error) {
+    console.log(error);
+
+  }
+}
+
+document.getElementById("google-btn")?.addEventListener("click", signInWithGoogle)

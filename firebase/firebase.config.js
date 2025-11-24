@@ -6,7 +6,12 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   updatePassword,
-  signOut
+  signOut,
+
+  onAuthStateChanged ,
+
+GoogleAuthProvider,
+signInWithPopup
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 
@@ -33,5 +38,8 @@ export {
   sendEmailVerification,
   sendPasswordResetEmail,
   updatePassword,
-  signOut
+  signOut,
+  onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup
 }
