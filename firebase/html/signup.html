@@ -42,21 +42,34 @@
 
   <!-- Form -->
 
-  <form class="container-xxl p-5 border bg-dark my-5 text-light border-1">
+  <form id="signup-form" class="container-xxl p-5 border bg-dark my-5 text-light border-1">
   <h1 class="text-primary"> Signup Form</h1>
+   <div class="mb-3">
+    <label for="name"  class="form-label">Name</label>
+    <input type="text" required class="form-control" id="name" placeholder="Enter your Name..." >
+  </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <input type="email" required class="form-control" id="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text  text-light">We'll never share your email with anyone else.</div>
+  </div>
+     <div class="mb-3">
+    <label for="contact" class="form-label">Contact</label>
+    <input type="number" required class="form-control" id="contact" placeholder="e.g 01928918291" >
+  </div>
+  </div>
+     <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input type="number" required class="form-control" id="age" placeholder="e.g 10" >
   </div>
   <div class="mb-3">
     <label for="pswd" class="form-label">Password</label>
-    <input type="password" class="form-control" id="pswd">
+    <input type="password" required class="form-control" id="pswd">
   </div>
     <div class="mb-3">
     <p>Already Have an Account? <a href="./login.html">Login</a></p>
   </div>
-  <button type="button" id="btn" class="btn btn-primary">Signup</button>
+  <button type="submit"  class="btn btn-primary">Signup</button>
 </form>
 
 <script type="module" src="../js/auth.js"></script>
