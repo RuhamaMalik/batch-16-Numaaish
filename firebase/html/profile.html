@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>batch16_profile</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
+
 <body>
 
 
-    <!--  Header -->
+  <!--  Header -->
 
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container-xxl">
-    <a class="navbar-brand" href="#">Batch_16</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/profile.html">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/login.html">Login</a>
-        </li>
-     
-      </ul>
-    
+    <div class="container-xxl">
+      <a class="navbar-brand" href="#">Batch_16</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./html/profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./html/login.html">Login</a>
+          </li>
+
+        </ul>
+
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!--  Header -->
-  
 
-<div class="card m-auto my-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://e0.pxfuel.com/wallpapers/481/120/desktop-wallpaper-features-of-cute-doll-that-make-everyone-love-it-cute-doll-cute-doll-couple-thumbnail.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title" id="username">Ruhama Gull</h5>
-        <p class="card-text">malikruhama7@gmail.com</p>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+  <div class="card m-auto my-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img
+          src="https://e0.pxfuel.com/wallpapers/481/120/desktop-wallpaper-features-of-cute-doll-that-make-everyone-love-it-cute-doll-cute-doll-couple-thumbnail.jpg"
+          class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+
+          <label>Name <input class="card-title  form-control update" name="name" id="uname"></label>
+
+          <p class="card-text" id="email">Enail : malikruhama7@gmail.com</p>
+
+          <label>Bio<textarea name="bio" class="card-text form-control update"
+              id="bio">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</textarea></label>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+
+          <label>Contact<input name="contact" type="number" class="card-text form-control update" id="contact"></label>
+          <label>Age <input type="number" name="age" class="card-text form-control update" id="age"></label>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- /////////////// Reset pswd -->
+  <!-- /////////////// Reset pswd -->
 
-<form class="card m-auto my-3" style="max-width: 540px;">
-  <div class="form-group m-3">
-    <label for="new-pswd">New Password</label>
-    <input type="password" class="mt-2 form-control" id="new-pswd" placeholder="Password">
+  <form class="card m-auto my-3" style="max-width: 540px;">
+    <div class="form-group m-3">
+      <label for="new-pswd">New Password</label>
+      <input type="password" class="mt-2 form-control" id="new-pswd" placeholder="Password">
+    </div>
+
+    <button id="reset-btn" type="button" class="btn btn-dark">Reset Password</button>
+  </form>
+
+  <!-- /////////////// Logout -->
+
+  <div class="card m-auto my-3" style="max-width: 540px;">
+
+    <button id="logout-btn" type="button" class="btn btn-dark">Logout</button>
   </div>
- 
-  <button id="reset-btn" type="button" class="btn btn-dark">Reset Password</button>
-</form>
-
-<!-- /////////////// Logout -->
-
-<div class="card m-auto my-3" style="max-width: 540px;">
-
-  <button id="logout-btn" type="button" class="btn btn-dark">Logout</button>
-</div>
 
 
 
@@ -84,8 +97,9 @@
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
     crossorigin="anonymous"></script>
 
-    <script type="module" src="../js/auth.js"></script>
-    <script type="module" src="../index.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../index.js"></script>
 
 </body>
+
 </html>

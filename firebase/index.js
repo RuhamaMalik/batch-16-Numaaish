@@ -15,6 +15,7 @@ import {
   doc,
   db,
   serverTimestamp,
+  updateDoc,
 } from "./firebase.config.js";
 
 ////////////////// SignUp
@@ -45,11 +46,11 @@ const signUp = async (e) => {
       role: "user",
     });
 
-    if(!user.emailVerified){
-       await sendEmailVerification(auth.currentUser);
+    if (!user.emailVerified) {
+      await sendEmailVerification(auth.currentUser);
       signOut(auth);
       alert("Please verify your email")
-    window.location.replace("/html/login.html");
+      window.location.replace("/html/login.html");
     }
   } catch (error) {
     console.log(error);
@@ -162,3 +163,51 @@ document
 //  }
 // }
 // writeUserData(1, "Ruhama Gull", "ruhama@gmail.com", 659899545);
+
+
+
+
+////////////////////////////// Update Profile
+
+
+// const updateProfile = async () => {
+//   const name = document.getElementById("uname").value;
+
+//   try {
+//     const userRef = doc(db, "users", auth.currentUser.uid);
+// await updateDoc(userRef, {
+//   name
+// });
+//   } catch (error) {
+//     console.log(error);
+
+//   }
+// }
+
+// document.getElementById("uname")?.addEventListener("blur", updateProfile);
+
+
+
+
+const updateProfile = async (input) => {
+  console.log(">>>>>>>>>>>", input);
+
+  // const userRef = doc(db, "users", auth.currentUser.uid);
+  // await updateDoc(userRef, {
+
+  // });
+}
+
+
+const inputs = document.querySelectorAll(".update");
+
+inputs.forEach((input) => {
+
+  input.addEventListener("blur", async () => {
+    const userRef = doc(db, "users", auth.currentUser.uid);
+    await updateDoc(userRef, {
+      [input.name]: input.value,
+    });
+  })
+
+})
