@@ -46,6 +46,8 @@ const signUp = async (e) => {
       role: "user",
     });
 
+    
+
     if (!user.emailVerified) {
       await sendEmailVerification(auth.currentUser);
       signOut(auth);
@@ -125,6 +127,7 @@ document.getElementById("reset-btn")?.addEventListener("click", ResetPassword);
 
 document.getElementById("logout-btn")?.addEventListener("click", () => {
   signOut(auth);
+  localStorage.removeItem("role");
 });
 
 //////////////////////////// SignIn with Google
@@ -186,17 +189,6 @@ document
 
 // document.getElementById("uname")?.addEventListener("blur", updateProfile);
 
-
-
-
-const updateProfile = async (input) => {
-  console.log(">>>>>>>>>>>", input);
-
-  // const userRef = doc(db, "users", auth.currentUser.uid);
-  // await updateDoc(userRef, {
-
-  // });
-}
 
 
 const inputs = document.querySelectorAll(".update");
