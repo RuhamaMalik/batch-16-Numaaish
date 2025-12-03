@@ -17,7 +17,20 @@ import {
 
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-database.js"; // realtime db
 
-import { getFirestore, doc, setDoc,serverTimestamp , getDoc, updateDoc  } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import {
+  getFirestore,
+  doc,
+  setDoc, serverTimestamp,
+  getDoc,
+  updateDoc,
+  collection,
+  getDocs,
+  query,
+  onSnapshot,
+
+  deleteDoc,
+  where
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAK7p5Z0jbFngWtYpiEO86bsEKJSqSlqTE",
@@ -54,9 +67,17 @@ export {
   database,
 
   db,
-  doc, 
+  doc,
   setDoc,
   serverTimestamp,
   getDoc,
-  updateDoc
+  updateDoc,
+  collection,
+  getDocs,
+
+  query,
+  onSnapshot,
+
+  deleteDoc,
+  where
 }
