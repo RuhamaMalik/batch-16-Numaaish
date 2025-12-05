@@ -1,4 +1,4 @@
-import { collection, db, deleteDoc, doc, getDocs, onSnapshot, query, serverTimestamp, updateDoc, where } from "../firebase.config.js";
+import { and, collection, db, deleteDoc, doc, getDocs, onSnapshot, or, query, serverTimestamp, updateDoc, where } from "../firebase.config.js";
 
 
 // const getAllUsers = async () => {
@@ -29,7 +29,37 @@ import { collection, db, deleteDoc, doc, getDocs, onSnapshot, query, serverTimes
 const getAllUsers = async () => {
   const userTable = document.getElementById("all-users");
 
-  const q = query(collection(db, "users"), where("age",  ">", "10"));
+  const q = query(collection(db, "users"));
+
+
+  // const q = query(collection(db, "users"), where("age",  ">", "10"));
+
+  // const q = query(collection(db, "users"), where("isActive",  "!=", false));
+
+  // const q = query(collection(db, "users"), where("skills",  "array-contains", "communication"));
+
+  // const q = query(collection(db, "users"), where("role",  "in", ["admin","user","manager"]));
+
+  // const q = query(collection(db, "users"), where("role",  "not-in", ["admin","manager"]));
+
+  // const q = query(collection(db, "users"), where("skills",  "array-contains-any", ["cooking","writing"]));
+
+
+  // const q = query(collection(db, "users"),
+  //   or(
+  //      where("age", "==", "15"),
+  //     where("role", "==", "admin")
+     
+  //   )
+  // )
+  
+  //   const q = query(collection(db, "users"),
+  //   and(
+  //      where("age", "==", "15"),
+  //     where("role", "==", "manager")
+     
+  //   )
+  // )
 
   const unsubscribe = await onSnapshot(q, (querySnapshot) => {
     userTable.innerHTML = "";
@@ -77,11 +107,11 @@ window.updateStatus = async (id, status) => {
 
 //////////////////// delete user
 
-window.deleteUser =async (id)=>{
-try {
-  await deleteDoc(doc(db, "users",id));
-} catch (error) {
-  console.log(error);
-  
-}
+window.deleteUser = async (id) => {
+  try {
+    await deleteDoc(doc(db, "users", id));
+  } catch (error) {
+    console.log(error);
+
+  }
 }
