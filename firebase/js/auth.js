@@ -30,6 +30,7 @@ onAuthStateChanged(auth, async (user) => {
       let contact = document?.querySelector("#contact");
       let age = document?.querySelector("#age");
       let bio = document?.querySelector("#bio");
+      let image = document?.querySelector("#profile-img");
 
       if (userData) {
         if (uname) uname.value = userData?.name;
@@ -37,6 +38,7 @@ onAuthStateChanged(auth, async (user) => {
         if (age) age.value = userData?.age;
         if (bio) bio.value = userData?.bio || "add bio here";
         if (email) email.innerHTML = userData?.email;
+        if (image && userData?.profImage) image.src =userData?.profImage;
 
       }
 

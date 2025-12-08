@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin-Dashboard</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
 
   <!--  Header -->
 
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container-xxl">
-    <a class="navbar-brand" href="#">Batch_16</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/profile.html">Profile</a>
-        </li>
-        <li class="nav-item" id="admin-tab">
-          <a class="nav-link"  href="./admin.html">Users</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/login.html">Login</a>
-        </li>
-     
-      </ul>
-    
+    <div class="container-xxl">
+      <a class="navbar-brand" href="#">Batch_16</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./html/profile.html">Profile</a>
+          </li>
+          <li class="nav-item" id="admin-tab">
+            <a class="nav-link" href="./admin.html">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./html/login.html">Login</a>
+          </li>
+
+        </ul>
+
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!--  Header -->
 
@@ -45,38 +48,97 @@
 
   <h1 class="container-xxl text-center">Admin Products</h1>
 
+  <button type="button" class="btn btn-success d-block m-5 ms-auto" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">Add Product</button>
 
+
+  <!-- Add Product Modal -->
+
+  <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input required type="file" class="form-control" id="image">
+            </div>
+
+
+            <img class="d-block mx-auto " style="height: 400px !important;" src="https://e0.pxfuel.com/wallpapers/481/120/desktop-wallpaper-features-of-cute-doll-that-make-everyone-love-it-cute-doll-cute-doll-couple-thumbnail.jpg" alt="">
+
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input required type="text" class="form-control" id="title" placeholder="Enter title here...">
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Description</label>
+              <textarea required class="form-control" id="desc"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input required type="number" class="form-control" id="price" placeholder="Enter price here...">
+            </div>
+
+            <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <input required type="text" class="form-control" id="category" placeholder="Enter Category here...">
+            </div>
+
+
+          </form>
+        </div>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Products table -->
 
   <table class="container-xxl border border-1 table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -89,4 +151,5 @@
   <script type="module" src="../../js/checkRole.js"></script>
   <script type="module" src="../../js/admin.js"></script>
 </body>
+
 </html>

@@ -46,7 +46,7 @@ const signUp = async (e) => {
       role: "user",
     });
 
-    
+
 
     if (!user.emailVerified) {
       await sendEmailVerification(auth.currentUser);
@@ -203,3 +203,47 @@ inputs.forEach((input) => {
   })
 
 })
+
+
+///////////////////////// 
+
+
+const uploadImage = async () => {
+  const file = document.getElementById("image");
+  const selectedImg = file.files[0];
+  const cloudName = "da9vibnc0";
+  const presetName = "batch-16";
+
+  const formData = new FormData();
+  formData.append("file", selectedImg);
+  formData.append("cloud_name", cloudName);
+  formData.append("upload_preset", presetName);
+
+
+  try {
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: "POST",
+      body: formData
+    });
+
+
+    const data = await response.json();
+
+    const userRef = doc(db, "users", auth.currentUser.uid);
+    await updateDoc(userRef, {
+      profImage: data?.secure_url,
+      imageId: data?.public_id
+    });
+
+    const image = document.getElementById("profile-img")
+    if (image) image.src = data?.secure_url;
+
+  } catch (error) {
+    console.log(error);
+
+  }
+
+}
+
+const uploadBtn = document.getElementById("upload");
+if (uploadBtn) addEventListener("click", uploadImage)
