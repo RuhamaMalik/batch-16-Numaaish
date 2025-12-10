@@ -31,7 +31,9 @@ import {
   deleteDoc,
   where,
   or,
-  and
+  and,
+
+  addDoc 
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -83,5 +85,6 @@ export {
   deleteDoc,
   where,
    or,
-   and
+   and,
+   addDoc
 }

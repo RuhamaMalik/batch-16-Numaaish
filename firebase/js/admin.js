@@ -1,4 +1,4 @@
-import { and, collection, db, deleteDoc, doc, getDocs, onSnapshot, or, query, serverTimestamp, updateDoc, where } from "../firebase.config.js";
+import { addDoc, and, auth, collection, db, deleteDoc, doc, getDocs, onSnapshot, or, query, serverTimestamp, updateDoc, where } from "../firebase.config.js";
 
 
 // const getAllUsers = async () => {
@@ -49,15 +49,15 @@ const getAllUsers = async () => {
   //   or(
   //      where("age", "==", "15"),
   //     where("role", "==", "admin")
-     
+
   //   )
   // )
-  
+
   //   const q = query(collection(db, "users"),
   //   and(
   //      where("age", "==", "15"),
   //     where("role", "==", "manager")
-     
+
   //   )
   // )
 
@@ -115,3 +115,88 @@ window.deleteUser = async (id) => {
 
   }
 }
+
+
+///////////////////// add product
+
+
+
+
+
+const uploadImage = async (id) => {
+  const file = document.getElementById(id);
+  const selectedImg = file.files[0];
+  const cloudName = "dxo6r3i8k";
+  const presetName = "kuch-bhi";
+
+  const formData = new FormData();
+  formData.append("file", selectedImg);
+  formData.append("cloud_name", cloudName);
+  formData.append("upload_preset", presetName);
+
+
+  try {
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: "POST",
+      body: formData
+    });
+
+
+    const data = await response.json();
+    return {
+      image: data?.secure_url,
+      imageId: data?.public_id
+    }
+
+  } catch (error) {
+    console.log(error);
+
+  }
+
+}
+
+const addProduct = async () => {
+  // const productImg = document.getElementById("image");
+  const title = document.getElementById("title").value;
+  const description = document.getElementById("desc").value;
+  const price = document.getElementById("price").value;
+  const category = document.getElementById("category").value;
+  const stock = document.getElementById("stock").value;
+
+  try {
+
+    ////////////// image upload
+
+    const image = await uploadImage("image");
+    const docRef = await addDoc(collection(db, "products"), {
+      image,
+      title,
+      description,
+      price,
+      category,
+      isAvailable: true,
+      stock,
+      timestamp: serverTimestamp(),
+      userId : auth.currentUser.uid
+    });
+    console.log("Document written with ID: ", docRef.id);
+
+
+document.getElementById("title").value ="";
+document.getElementById("desc").value="";
+document.getElementById("price").value ="";
+ document.getElementById("category").value ="";
+ document.getElementById("stock").value ="";
+
+
+  } catch (error) {
+    console.log(error);
+
+  }
+
+}
+
+
+const productBtn = document.getElementById("product-btn");
+
+if (productBtn) productBtn.addEventListener("click", addProduct);

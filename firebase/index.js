@@ -16,6 +16,10 @@ import {
   db,
   serverTimestamp,
   updateDoc,
+  onSnapshot,
+  query,
+  getDocs,
+  collection,
 } from "./firebase.config.js";
 
 ////////////////// SignUp
@@ -247,3 +251,43 @@ const uploadImage = async () => {
 
 const uploadBtn = document.getElementById("upload");
 if (uploadBtn) addEventListener("click", uploadImage)
+
+
+
+
+/////////////////////////// Get All Products (Home page)
+
+let homeProducts = document.getElementById("home-products");
+
+const getAllProducts = async () => {
+  try {
+    const ProductsRef = query(collection(db, "products"));
+
+    const querySnapshot = await getDocs(ProductsRef);
+    querySnapshot.forEach((doc) => {
+
+      // console.log(doc.id, " => ", doc.data());
+      const product = doc.data();
+      homeProducts.innerHTML += `
+ <div class="card" style="width: 18rem;">
+      <img src="${product.image.image}"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${product.title}</h5>
+        <p class="card-text">${product.description}</p>
+        <p class="card-text">${product.price}</p>
+        <a href="#" class="btn btn-danger"  >view Details</a>
+      </div>
+    </div>
+`
+
+    });
+
+
+  } catch (error) {
+    console.log(error);
+
+  }
+}
+
+if (homeProducts) getAllProducts();
