@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.page1,.page2,.page3,.page4{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(3, 89, 92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page2{
+  background-color: cadetblue;
+}
+.page3{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 25vw;
+  white-space: nowrap;
+  justify-content: flex-start;
+}
+
+
+.page4{
+  background-color: rgb(103, 104, 104);
+}
+.box{
+  height: 300px;
+  width: 300px;
+  background-color: burlywood;
+}

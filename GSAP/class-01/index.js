@@ -101,25 +101,47 @@ tl.from(
   opacity: 0,
   duration: 0.8,
   y: 15,
-  stagger:0.3
+  stagger: -0.3
 }
 )
 
 
-tl.from(".hero",{
-  opacity:0,
-  y:500,
-  duration:1,
+tl.from(".hero", {
+  opacity: 0,
+  y: 500,
+  duration: 1,
+})
+
+tl.from(".toffee", {
+  opacity: 0,
+  scale: 0.2
+})
+
+tl.to(".toffee",{
+  rotate:360,
+  x: -480,
+  y:-28,
+  scale:0.6,
+  borderRadius:"30%"
+})
+
+tl.to(".toffee",{
+borderRadius:"10%",
+repeat:-1,
+yoyo:true,
+duration:1
 })
 
 
-tl.from(".hero h1",{
-  opacity:0,
- scale:0,
-  duration:1,
+tl.from(".hero h1", {
+  opacity: 0,
+  scale: 0,
+  duration: 1,
 })
-tl.from(".hero p",{
-  opacity:0,
- scale:0,
-  duration:1,
-})
+tl.from(".hero p", {
+  opacity: 0,
+  scale: 0,
+  duration: 1,
+});
+
+
