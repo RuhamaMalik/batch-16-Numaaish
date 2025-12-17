@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+body {
+  background-color: black;
+  color: rgb(236, 240, 243);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+}
+
+/* /////////////////////////////////// */
+
+.cursor{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid red;
+  box-shadow: 2px 6px 8px rgba(255, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+
+}
+
+.cursorInner{
+  height: 10px;
+  width: 10px;
+  background-color: red;
+    border-radius: 50%;
+
+}
+
+/* /////////////////////////////////// */
+
+header {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.logo span {
+  color: red;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+nav i{
+font-size: 1.5em;
+cursor: pointer;
+}
+nav a:hover, nav i:hover {
+  color: red;
+}
+
+
+/* ////////////////////////// Side Menu */
+
+
+.sideMenu{
+  height: 100vh;
+  width: 30%;
+  background-color: rgb(110, 109, 109);
+  position: absolute;
+  top: 0;
+  right:-30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  padding: 3em;
+
+}
+
+.sideMenu a{
+  font-size: 2.5em;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.sideMenu i{
+  font-size: 2.5em;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.sideMenu i:hover, .sideMenu a:hover{
+  color: rgb(255, 255, 255);
+}
