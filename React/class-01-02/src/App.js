@@ -1,5 +1,7 @@
 import { Component } from "react";
-
+import Gallery from "./components/gallery/Gallery";
+import Gallery2 from "./components/gallery/Gallery2";
+import Header from "./components/header/Header";
 
 //////////////////////// Component 1
 
@@ -10,10 +12,32 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <>
+
+        <Header />
+
+        <br />
+        <hr />
+
+        <Gallery2 />
+
+        <br />
+        <hr />
+
+        <Gallery />
+
+        <br />
+        <hr />
+        <ComponentA />
+        <br />
+        <hr />
+        <ComponentB />
+        <br />
+        <hr />
         <h1>Hello From App Component</h1>
         <p>Hello, mai aik class component hun</p>
-      </div>
+      </>
+
     )
   }
 
@@ -63,7 +87,9 @@ export class ComponentB extends Component {
   }
 }
 
-
+// ComponentDidMount() ---- create
+// ComponentDidUpdate() --- update
+// ComponentWillUnmount --- destroy
 
 
 
