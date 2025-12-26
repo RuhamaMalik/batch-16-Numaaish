@@ -6,6 +6,8 @@ const Header = () => {
     {/* <h1  className="blue">My Header</h1> */}
     <h1  className={styles.green}>My Header</h1>
     
+
+
     </>
   )
 }

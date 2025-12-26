@@ -2,6 +2,7 @@ import { Component } from "react";
 import Gallery from "./components/gallery/Gallery";
 import Gallery2 from "./components/gallery/Gallery2";
 import Header from "./components/header/Header";
+import Style from "./components/styles/style";
 
 //////////////////////// Component 1
 
@@ -15,6 +16,11 @@ class App extends Component {
       <>
 
         <Header />
+
+        <br />
+        <hr />
+
+        <Style />
 
         <br />
         <hr />
