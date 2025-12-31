@@ -1,4 +1,4 @@
-import Img1 from "../../asssets/images/butterfly.webp";
+import Img1 from "../../../asssets/images/butterfly.webp";
 import "./Gallery.css";
 
 const Gallery = () => {
