@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import Button from './Button'
 
 const Main = () => {
 
@@ -8,6 +9,12 @@ const Main = () => {
   return (
     <>
       <h1 >Props MAIN COmponent</h1>
+
+      <Button text="View Details" />
+      <Button text="Sign Up" icon="fa-solid fa-user" iconBg={true} />
+      <Button text="Edit" icon="fa-solid fa-pencil" />
+      <Button text="Delete" icon="fa-solid fa-trash" iconBg={true} />
+
 
       <Card
         name="Shampoo"

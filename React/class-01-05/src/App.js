@@ -1,9 +1,11 @@
-import { Component } from "react";
-import Gallery from "./components/styleClass/gallery/Gallery";
-import Gallery2 from "./components/styleClass/gallery/Gallery2";
-import Header from "./components/styleClass/header/Header";
-import Style from "./components/styleClass/styles/style";
-import Main from "./components/props/Main";
+// import { Component } from "react";
+// import Gallery from "./components/styleClass/gallery/Gallery";
+// import Gallery2 from "./components/styleClass/gallery/Gallery2";
+// import Header from "./components/styleClass/header/Header";
+// import Style from "./components/styleClass/styles/style";
+// import Main from "./components/props/Main";
+
+import Main from "./components/hooks/Main"
 
 //////////////////////// Component 1
 
@@ -107,11 +109,14 @@ import Main from "./components/props/Main";
 
 
 const App = () => {
+
   return (
-   <>
-   <Main />
-   
-   </>
+    <>
+
+      {/* <Main />  --------Props */}
+
+      <Main />
+    </>
   )
 }
 

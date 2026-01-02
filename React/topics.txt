@@ -1,0 +1,31 @@
+Compnents --- HOC
+Babel ---- transpiler (tool)
+class coponent + lifecycle methods overview
+React.Fragment  || <> </>
+JSX
+className
+Modules
+Images
+CSS [css modules, inline css, style.css ]
+Virtual Dom (diffing, Reconcilation,garbage cleaning)
+props
+list (Array print)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
