@@ -5,7 +5,8 @@
 // import Style from "./components/styleClass/styles/style";
 // import Main from "./components/props/Main";
 
-import Main from "./components/hooks/Main"
+// import Main from "./components/hooks/Main"
+import Main from "./components/routing/Main"
 
 //////////////////////// Component 1
 
@@ -114,6 +115,8 @@ const App = () => {
     <>
 
       {/* <Main />  --------Props */}
+
+      {/* <Main />  -------- Hooks */}
 
       <Main />
     </>

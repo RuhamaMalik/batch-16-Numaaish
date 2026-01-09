@@ -12,6 +12,8 @@ props
 list (Array print)
 State
 useState
+useEffect
+
 
 
 
