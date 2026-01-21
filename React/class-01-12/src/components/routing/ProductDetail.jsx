@@ -22,10 +22,19 @@ const {id} = useParams();
     fetchPost();
   }, [])
 
+  // console.log(post);
+  
   return (
     <>
     <h1>Detil Page</h1>
-    <img src={post?.thumbnail} /> 
+    {/* <img src={post?.thumbnail} />  */}
+{
+  Array.isArray(post.images) ? (
+<img src={post.images[0]} alt="" />
+  ):(
+ <img src={post?.thumbnail} />
+  )
+}
     <h2>{post?.title}</h2>
     <p>{post.description}</p>
     </>

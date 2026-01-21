@@ -12,6 +12,7 @@ import ProductDetail from './ProductDetail'
 import { Route } from 'react-router-dom'
 import Layout from './Layout'
 import UserLayout from './UserLayout'
+import { fetchProductDetail, fetchProducts } from './data'
 
 const Main = () => {
 
@@ -53,7 +54,24 @@ const Main = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/services' element={<Services />} />
           <Route path='/blog' element={<Blog />} />
-          <Route path='/posts' element={<Post />} />
+
+
+          <Route
+            loader={fetchProducts}
+            path='/products'
+            errorElement={<h1>My Custom Error Page</h1>}
+            element={<Post />} />
+
+
+
+          <Route
+            loader={({ params }) => fetchProductDetail(params)}
+            path='/products/:id'
+            errorElement={<h1>My Custom Error Page</h1>}
+            element={<ProductDetail />} />
+
+
+
         </Route>
 
         <Route path="/signup" element={<h1>Signup</h1>} />
@@ -67,7 +85,9 @@ const Main = () => {
 
       </>
 
-    )
+    ), {
+    hydration: { fallbackElement: <h1>Loading</h1> }
+  }
   )
 
 

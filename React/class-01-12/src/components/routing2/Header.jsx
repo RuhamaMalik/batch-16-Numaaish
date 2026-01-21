@@ -48,10 +48,10 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto gap-4  ">
-             
+
               {/* <Nav.Link href="/home">Home</Nav.Link> */}
-              <NavLink className={({isActive})=> ` text-decoration-none 
-              ${isActive ? "  text-danger " : "  text-info "}` } to="/about">About</NavLink>
+              <NavLink className={({ isActive }) => ` text-decoration-none 
+              ${isActive ? "  text-danger " : "  text-info "}`} to="/about">About</NavLink>
 
               <NavLink className={({ isActive }) => `
               text-decoration-none
@@ -66,14 +66,19 @@ const Header = () => {
               <NavLink className={({ isActive }) => `
               text-decoration-none
               ${isActive ? "   text-danger" : "  text-info"}
-              `  } to="/posts">Posts</NavLink>
-             
+              `  } to="/products">Posts</NavLink>
+
+              <NavLink className={({ isActive }) => `
+              text-decoration-none
+              ${isActive ? "   text-danger" : "  text-info"}
+              `  } to="/user">Profile</NavLink>
+
 
               {/* <HashLink className={({ isActive }) => `
               text-decoration-none
               ${isActive ? "   text-danger" : "  text-info"}
               `  } to="/about#h3">Heading 3</HashLink> */}
-             
+
             </Nav>
           </Navbar.Collapse>
         </Container>
