@@ -1,6 +1,6 @@
 Compnents --- HOC
 Babel ---- transpiler (tool)
-class coponent + lifecycle methods overview
+class component + lifecycle methods overview
 React.Fragment  || <> </>
 JSX
 className
@@ -13,7 +13,8 @@ list (Array print)
 State
 useState
 useEffect
-
+Routing
+Lifting State up
 
 
 
