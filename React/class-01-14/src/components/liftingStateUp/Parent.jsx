@@ -8,7 +8,6 @@ const Parent = () => {
     <>
       <ChildA data={count} updateCount={setCount} />
       <ChildB data={count} />
-
     </>
   )
 }
