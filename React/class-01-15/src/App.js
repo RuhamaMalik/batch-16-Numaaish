@@ -5,8 +5,10 @@
 // import Style from "./components/styleClass/styles/style";
 // import Main from "./components/props/Main";
 
-import Main from "./components/liftingStateUp/Main"
-import Form from "./components/liftingStateUp/multiStepForm/Form"
+import UseRefMain from "./components/hooks/useRef/UseRefMain"
+
+// import Main from "./components/liftingStateUp/Main"
+// import Form from "./components/liftingStateUp/multiStepForm/Form"
 
 // import Main from "./components/hooks/Main"
 // import Main from "./components/routing/Main"
@@ -129,7 +131,11 @@ const App = () => {
       {/* <Main /> */}
 
 
-      <Form />
+      {/* <Form /> */}
+
+      <UseRefMain />
+
+
     </>
   )
 }
