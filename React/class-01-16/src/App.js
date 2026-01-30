@@ -5,7 +5,12 @@
 // import Style from "./components/styleClass/styles/style";
 // import Main from "./components/props/Main";
 
-import UseRefMain from "./components/hooks/useRef/UseRefMain"
+import Boss from "./components/contextApi/Boss"
+import Main from "./components/contextApi/example/Main"
+
+// import Main from "./components/propsdrilling/Main"
+
+// import UseRefMain from "./components/hooks/useRef/UseRefMain"
 
 // import Main from "./components/liftingStateUp/Main"
 // import Form from "./components/liftingStateUp/multiStepForm/Form"
@@ -133,9 +138,14 @@ const App = () => {
 
       {/* <Form /> */}
 
-      <UseRefMain />
+      {/* <UseRefMain /> */}
+
+      {/* <Main /> ---------- props drilling */}
 
 
+      {/* <Boss /> ---------- context api */}
+
+      <Main />
     </>
   )
 }
