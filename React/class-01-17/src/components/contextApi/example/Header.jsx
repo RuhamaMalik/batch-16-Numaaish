@@ -1,13 +1,16 @@
+import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { ThemeContext } from './context/ThemeProvider';
 
 const Header = () => {
+  const {currentStyle} = useContext(ThemeContext);
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="shadow-sm" style={currentStyle.base} >
         <Container>
           <Navbar.Brand href="/">RGMCoders</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

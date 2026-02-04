@@ -4,6 +4,8 @@ import About from "./About"
 import Home from "./Home"
 import Contact from "./Contact"
 import Services from "./Services"
+import ThemeProvider from "./context/ThemeProvider"
+
 
 const Main = () => {
   const router = createBrowserRouter(
@@ -21,7 +23,11 @@ const Main = () => {
   )
   return (
     <>
-      <RouterProvider router={router} />
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+
+      
     </>
   )
 }
