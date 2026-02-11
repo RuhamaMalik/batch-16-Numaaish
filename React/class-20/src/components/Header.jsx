@@ -1,24 +1,34 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80)
+    }
+    window.addEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     // <nav className="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default">
-    <nav className=" fixed w-full z-20 top-0 start-0 border-default">
+    <nav className={` fixed w-full z-20 top-0 start-0 transition-all duration-500 border-default ${
+      isScrolled ? "bg-black":"bg-transparent "
+    }  `}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
         {/* Logo */}
         <NavLink to="/" className="flex items-center space-x-3">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlw3jpMM70QCDa6ldeW2Vpi8Wvw-xJZAxI2w&s"
-            className="h-10"
-            alt="Flowbite Logo"
+            src="https://static.vecteezy.com/system/resources/thumbnails/007/578/784/small/luxury-awesome-phoenix-logo-design-template-vector.jpg"
+            className="h-10 rounded-full "
+            alt=" Logo"
           />
-          <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
+          <span className="self-center text-xl text-white font-semibold whitespace-nowrap">
             HeavyBite
           </span>
         </NavLink>
@@ -26,7 +36,7 @@ const Header = () => {
         {/* Mobile Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-base md:hidden  hover:text-red-600 cursor-pointer focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
         >
           <span className="sr-only">Open main menu</span>
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
@@ -41,7 +51,7 @@ const Header = () => {
 
         {/* Menu */}
         <div className={`${menuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-neutral-primary">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
 
             {/* Home */}
             <li>
@@ -49,12 +59,12 @@ const Header = () => {
                 to="/"
                 className={({ isActive }) =>
                   `block py-2 px-3  ${isActive
-                    ? "text-yellow-300 "
-                    : "text-heading hover:text-yellow-300   "
+                    ? "text-red-600 "
+                    : "text-white hover:text-red-600   "
                   }`
                 }
 
-              // className="block py-2 px-3 text-heading hover:text-fg-brand"
+              // className="block py-2 px-3 text-white hover:text-fg-brand"
               >
                 Home
               </NavLink>
@@ -64,13 +74,13 @@ const Header = () => {
             <li className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                 className={
-                  `flex items-center justify-between py-2 px-2  w-full  hover:text-yellow-300  text-heading`
-                   }
-                
+                className={
+                  `flex items-center justify-between py-2 px-2  w-full  hover:text-red-600  text-white`
+                }
+
               >
 
-               
+
                 Packages
                 <svg className="w-4 h-4 ms-1.5" fill="none" viewBox="0 0 24 24">
                   <path
@@ -84,7 +94,7 @@ const Header = () => {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute mt-2 z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                <div className="md:absolute mt-2 z-10 md:bg-neutral-primary-medium md:border border-default-medium rounded-base md:shadow-lg w-full">
                   <ul className="p-2 text-sm text-body font-medium">
                     <li>
                       <NavLink to="/dashboard" className="block p-2 hover:bg-neutral-tertiary-medium rounded">
@@ -115,8 +125,8 @@ const Header = () => {
             <li>
               <NavLink to="/services" className={({ isActive }) =>
                 `block py-2 px-3  ${isActive
-                  ? "text-yellow-300 "
-                  : "text-heading hover:text-yellow-300   "
+                  ? "text-red-600 "
+                  : "text-white hover:text-red-600   "
                 }`
               }>
                 Services
@@ -125,8 +135,8 @@ const Header = () => {
             <li>
               <NavLink to="/login" className={({ isActive }) =>
                 `block py-2 px-3  ${isActive
-                  ? "text-yellow-300 "
-                  : "text-heading hover:text-yellow-300   "
+                  ? "text-red-600 "
+                  : "text-white hover:text-red-600   "
                 }`
               }>
                 Login
@@ -135,8 +145,8 @@ const Header = () => {
             <li>
               <NavLink to="/contact" className={({ isActive }) =>
                 `block py-2 px-3  ${isActive
-                  ? "text-yellow-300 "
-                  : "text-heading hover:text-yellow-300   "
+                  ? "text-red-600 "
+                  : "text-white hover:text-red-600   "
                 }`
               }>
                 Contact
