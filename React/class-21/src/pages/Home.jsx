@@ -1,20 +1,46 @@
 import gsap from "gsap";
 import ServiceCard from "../components/card/ServiceCard";
 import services from "../settings/services.data";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const refEle = useRef([]);
+  const container = useRef();
 
-// useEffect(()=>{
-//   gsap.from(".up",{
-//   y:-50,
-//   opacity:0,
-//   duration:1
 
-// })
-// },[])
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     refEle.current, {
+  //     y: -120,
+  //     opacity: 0
+  //   }, {
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease:"power2.inOut"
+  //   }
+  //   )
+  // }, []);
 
+  useGSAP(() => {
+    gsap.from(refEle.current, {
+      y: 50,
+      opacity: 0,
+      duration:1.5,
+      stagger: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: container.current,
+        start: 'top 70%',
+        end: 'top 20%',
+        scrub: true
+      }
+    });
+  },{scope:container});
 
   return (
     <>
@@ -40,7 +66,7 @@ const Home = () => {
         <div className="relative p-3  h-full flex justify-center max-w-screen-xl  mx-auto flex-col ">
 
           <h1 className="up  text-center md:text-left  text-6xl  md:text-9xl text-white font-bold transition-all duration-500">WELCOME TO</h1>
-         
+
           <h1 className=" text-center md:text-left text-6xl  md:text-9xl text-transparent font-bold text-shadow-lg/30 transition-all duration-500" style={{ WebkitTextStroke: "2px red" }} >HeavyBite</h1>
 
         </div>
@@ -48,14 +74,14 @@ const Home = () => {
       </div>
 
 
-      <div className="min-h-[50vh] flex gap-4 justify-center items-center">
+      <div ref={container} className="min-h-[50vh] flex gap-4 justify-center items-center">
 
         {
-          services && services.length>0 && services.map((service,i)=> (
-            <ServiceCard key={i} service={service} />
+          services && services.length > 0 && services.map((service, i) => (
+            <ServiceCard ref={(el) => (refEle.current[i] = el)} key={i} service={service} />
           ))
         }
-
+        {/* // [card,card,card] */}
       </div>
     </>
 

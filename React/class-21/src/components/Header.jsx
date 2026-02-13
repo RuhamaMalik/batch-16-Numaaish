@@ -132,6 +132,20 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
+
+
+ <li>
+              <NavLink to="/products" className={({ isActive }) =>
+                `block py-2 px-3  ${isActive
+                  ? "text-red-600 "
+                  : "text-white hover:text-red-600   "
+                }`
+              }>
+                Products
+              </NavLink>
+            </li>
+
+
             <li>
               <NavLink to="/login" className={({ isActive }) =>
                 `block py-2 px-3  ${isActive

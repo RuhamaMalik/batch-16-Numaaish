@@ -1,11 +1,15 @@
 import React from "react";
+import { forwardRef } from "react";
 
-const ServiceCard = ({service}) => {
+const ServiceCard = forwardRef(
+  ({service},ref) => {
+    // console.log(ref.current);
+    
 const {title, description, icon} = service;
  
   
   return (
-    <div className="bg-neutral-primary-soft  flex flex-col items-center max-w-sm p-6 border border-default rounded-base shadow-xs">
+    <div ref={ref} className="bg-neutral-primary-soft  flex flex-col items-center max-w-sm p-6 border border-default rounded-base shadow-xs">
       {/* <svg
         className="w-7 h-7 mb-3 text-body"
         aria-hidden="true"
@@ -61,7 +65,8 @@ const {title, description, icon} = service;
       </a>
     </div>
   );
-};
+}
+)
 
 
 
