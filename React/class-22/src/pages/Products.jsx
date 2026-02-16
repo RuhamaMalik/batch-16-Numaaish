@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ProductCard from "../components/card/ProductCard";
+import { useLoaderData } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,8 +12,9 @@ const Products = () => {
 
   const refEle = useRef([]);
   const container = useRef();
+const products = useLoaderData();
 
-
+console.log(products);
 
 
     useGSAP(() => {

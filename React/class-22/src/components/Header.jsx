@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
@@ -6,6 +6,10 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  // console.log(location.pathname);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,9 +20,9 @@ const Header = () => {
 
   return (
     // <nav className="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default">
-    <nav className={` fixed w-full z-20 top-0 start-0 transition-all duration-500 border-default ${
-      isScrolled ? "bg-black":"bg-transparent "
-    }  `}>
+    <nav className={` fixed w-full z-20 top-0 start-0 transition-all duration-500 border-default ${location.pathname === "/" && !isScrolled ? "bg-transparent" : "bg-black"
+
+      }  `}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
         {/* Logo */}
@@ -134,7 +138,7 @@ const Header = () => {
             </li>
 
 
- <li>
+            <li>
               <NavLink to="/products" className={({ isActive }) =>
                 `block py-2 px-3  ${isActive
                   ? "text-red-600 "
