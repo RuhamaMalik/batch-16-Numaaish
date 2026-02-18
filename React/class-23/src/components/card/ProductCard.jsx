@@ -1,21 +1,26 @@
 import { forwardRef } from "react";
 
 const ProductCard = forwardRef(
-  ({service},ref) => {
+  ({product},ref) => {
     
-const {title, description, icon} = service;
+const {title, description, thumbnail,price} = product;
+ console.log(product);
  
   
   return (
     <div ref={ref} className="bg-neutral-primary-soft  flex flex-col items-center max-w-sm p-6 border border-default rounded-base shadow-xs">
       
-      <p  className="w-10 h-10 text-4xl mb-3  text-body">{icon}</p>
-
+      {/* <p  className="w-10 h-10 text-4xl mb-3  text-body">{icon}</p> */}
+<img src={thumbnail} alt={title} />
       <a href="#">
         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-heading">
           {title || "my title"}
         </h5>
       </a>
+
+      <p className="mb-3 text-body self-start ">
+     $. {price}
+      </p>
 
       <p className="mb-3 text-body">
        {description}
@@ -25,7 +30,7 @@ const {title, description, icon} = service;
         href="#"
         className="inline-flex font-medium items-center text-red-600 hover:underline"
       >
-        See our guideline
+       See Details
         <svg
           className="w-4 h-4 ms-2 rtl:rotate-[270deg]"
           aria-hidden="true"

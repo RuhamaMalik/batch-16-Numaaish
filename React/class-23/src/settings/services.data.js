@@ -16,6 +16,24 @@ const services = [
     icon: "🛒",
     description:
       "Generate smart shopping lists directly from selected recipes. Save time and avoid missing ingredients while grocery shopping."
+  },
+   {
+    title: "Quick Grocery Assistant",
+    icon: "🛒",
+    description:
+      "Generate smart shopping lists directly from selected recipes. Save time and avoid missing ingredients while grocery shopping."
+  },
+   {
+    title: "Quick Grocery Assistant",
+    icon: "🛒",
+    description:
+      "Generate smart shopping lists directly from selected recipes. Save time and avoid missing ingredients while grocery shopping."
+  },
+   {
+    title: "Quick Grocery Assistant",
+    icon: "🛒",
+    description:
+      "Generate smart shopping lists directly from selected recipes. Save time and avoid missing ingredients while grocery shopping."
   }
 ];
 

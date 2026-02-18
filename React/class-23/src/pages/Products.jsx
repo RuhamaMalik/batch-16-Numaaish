@@ -11,41 +11,49 @@ gsap.registerPlugin(ScrollTrigger);
 const Products = () => {
 
   const refEle = useRef([]);
-  const container = useRef();
-const products = useLoaderData();
+  const container = useRef(null);
+  const products = useLoaderData();
 
-console.log(products);
+  console.log(refEle.current);
 
 
-    useGSAP(() => {
+
+  useGSAP(() => {
+
+    // refEle.current.forEach((card) => {
+
     gsap.from(refEle.current, {
       y: 50,
       opacity: 0,
-      duration:1.5,
-      stagger: 0.8,
+      duration: 1,
+      stagger: 0.4,
       ease: "power3.out",
       scrollTrigger: {
         trigger: container.current,
-        start: 'top 70%',
-        end: 'top 20%',
-        scrub: true
+        start: 'top 85%',
+          toggleActions: "play none none reverse"
       }
     });
-  },{scope:container});
+
+    // })
+
+
+
+  }, { scope: container });
 
   return (
-   <>
-   
-   <div ref={container} className="min-h-[50vh] flex gap-4 mt-20  justify-center items-center">
+    <>
+
+      <div ref={container} className="max-w-screen-xl mx-auto   min-h-[50vh] flex flex-wrap gap-4 mt-20  justify-center items-center">
 
         {
-          [1,2,3,4,5].map((service, i) => (
-            <ProductCard ref={(el) => (refEle.current[i] = el)} key={i} service={service} />
+          products?.map((product, i) => (
+            <ProductCard ref={(el) => (refEle.current[i] = el)} key={i} product={product} />
           ))
         }
       </div>
-   
-   </>
+
+    </>
   )
 }
 

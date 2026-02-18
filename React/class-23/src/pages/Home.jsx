@@ -74,7 +74,7 @@ const Home = () => {
       </div>
 
 
-      <div ref={container} className="min-h-[50vh] flex gap-4 justify-center items-center">
+      <div ref={container} className="min-h-[50vh] flex gap-4 justify-center flex-wrap items-center">
 
         {
           services && services.length > 0 && services.map((service, i) => (
