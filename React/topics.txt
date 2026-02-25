@@ -15,6 +15,14 @@ useState
 useEffect
 Routing
 Lifting State up
+axios
+contextAPI
+Redux
+firebase and GSAP integration
+Tailwind Css
+Flowbite
+Control and UnControl Component 
+UseRef
 
 
 

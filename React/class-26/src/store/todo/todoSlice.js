@@ -27,9 +27,17 @@ const todoSlice = createSlice({
       localStorage.setItem("todos", JSON.stringify(state.todo));
     },
     deleteTask: (state, action) => {
-     state.todo= state.todo.filter(task =>  task.id !== action.payload);
+      state.todo = state.todo.filter(task => task.id !== action.payload);
 
-     localStorage.setItem("todos", JSON.stringify(state.todo));
+      localStorage.setItem("todos", JSON.stringify(state.todo));
+    },
+    updateTask: (state, action) => {
+      state.todo = state.todo.map((task, i) => {
+        return task?.id === action.payload.id ?
+          action.payload  : task
+      });
+      localStorage.setItem("todos", JSON.stringify(state.todo));
+
     }
 
   }
@@ -37,6 +45,6 @@ const todoSlice = createSlice({
 
 
 
-export const { addTask,deleteTask } = todoSlice.actions;
+export const { addTask, deleteTask, updateTask } = todoSlice.actions;
 export default todoSlice.reducer;
 
