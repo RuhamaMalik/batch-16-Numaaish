@@ -25,7 +25,9 @@ Control and UnControl Component
 UseRef
 useMemo
 useCallback
-
+useReducer
+Custom Hook
+Lazy Loading + Suspense
 
 
 

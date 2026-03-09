@@ -1,0 +1,15 @@
+{
+  "name": "class-01",
+  "version": "1.0.0",
+  "description": "learning modules in nodejs",
+  "license": "ISC",
+  "author": "Ruhama Malik",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
