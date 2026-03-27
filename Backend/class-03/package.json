@@ -1,0 +1,15 @@
+{
+  "name": "class-03",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Ruhama Malik",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "url": "^0.11.4"
+  }
+}
