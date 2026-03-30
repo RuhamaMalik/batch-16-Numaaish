@@ -39,21 +39,42 @@ const url = require('url');
 
 const server = http.createServer((req, res) => {
   if (req.url !== '/favicon.ico') {
-    const log = ` ${req.url} --- Time: ${Date.now()} --- apna page\n`;
-   const parsedUrl =  url.parse(req.url,true);
-   console.log(parsedUrl);
-   
+    const log = ` ${req.url} --- Time: ${Date.now()} --- METHOD : ${req.method}\n`;
+    const parsedUrl = url.parse(req.url, true);
+    //  console.log(parsedUrl);
+
     fs.appendFile('log.txt', log, () => {
-      switch (req.url) {
+      switch (parsedUrl.pathname) {
         case '/':
           res.end("Home");
           break;
+
+
+
         case '/products':
-          res.end("Products");
+          if (req.method === "POST") {
+            //// db query
+            res.end("Product created Successfully");
+          } else if (req.method === "GET") {
+            res.end("Limca Drink - Lemon + Adrak");
+          }
+          // res.end(`Products Page : method: ${req.method} -  QUERY: Brand -  ${parsedUrl.query.brand} + ${parsedUrl.query.price}`);
           break;
+
+
         case '/orders':
+
+          // res.writeHead(
+          //   200,
+          //   {
+          //     "content-type": "application/json"
+          //   }
+          // )
+
           res.end("Orders");
           break;
+
+
         case '/about':
           res.end("About");
           break;

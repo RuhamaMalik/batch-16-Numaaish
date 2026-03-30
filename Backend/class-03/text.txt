@@ -2,3 +2,12 @@ Jumma Mubarak
 Eid Mubarak
 Shadi Mubarak
 Eid Mubarak
+
+
+ ///////////// Api Methods
+
+Get ---- get data
+Post 
+Put
+Patch
+Delete
