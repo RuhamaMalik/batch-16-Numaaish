@@ -1,0 +1,19 @@
+2) http methods
+
+get --- /getAllUsers ---   [{},{},{}]
+get --- /users ---   [{},{},{}]
+
+get --- /getUser/id ---   [{}]
+get --- /users/id ---   [{}]
+
+
+patch --- /updateUser/id ---   [..{}]
+patch --- /users/id ---   [..{}]
+
+
+post --- /createUser ---   [..{}]
+post --- /users ---   [..{}]
+
+
+delete --- /deleteUser/id ---   [..{}]
+delete --- /users/id ---   [..{}]
