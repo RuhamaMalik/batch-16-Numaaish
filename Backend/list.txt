@@ -1,0 +1,17 @@
+NODE JS
+modules ---- mjs, ejs
+modules ---- core && external module 
+
+-fs
+-http
+-path
+- __dirname __filename
+
+express js
+template engine - ejs
+versions
+REST full API's
+http methods
+
+
+tools > nodemon , postman
