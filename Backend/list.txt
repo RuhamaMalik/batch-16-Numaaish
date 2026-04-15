@@ -12,6 +12,8 @@ template engine - ejs
 versions
 REST full API's
 http methods
-
+middlewares > application , root level middleware
+Headers
+Api Status Code
 
 tools > nodemon , postman
